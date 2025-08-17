@@ -3,8 +3,8 @@
 USE alx_book_store;
 
 CREATE TABLE Authors (
-    aurthor_id INT PRIMARY KEY,
-    aurthor_name VARCHAR(215) NOT NULL
+    "aurthor_id" INT PRIMARY KEY,
+    "aurthor_name" VARCHAR(215) NOT NULL
 );
 CREATE TABLE Books (
     book_id INT PRIMARY KEY,
