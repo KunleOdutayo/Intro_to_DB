@@ -3,16 +3,16 @@
 USE alx_book_store;
 
 CREATE TABLE Authors (
-    "aurthor_id" INT PRIMARY KEY,
-    "aurthor_name" VARCHAR(215) NOT NULL
+    author_id INT PRIMARY KEY,
+    author_name VARCHAR(215) NOT NULL
 );
 CREATE TABLE Books (
     book_id INT PRIMARY KEY,
     title VARCHAR(130) NOT NULL,
-    aurthor_id INT,
+    author_id INT,
     price DOUBLE NOT NULL,
     publication_date DATE,
-    FOREIGN KEY (aurthor_id) REFERENCES (aurthor_id)
+    FOREIGN KEY (author_id) REFERENCES (author_id)
 );
 CREATE TABLE Customers (
     customer_id INT PRIMARY KEY,
