@@ -5,7 +5,7 @@ CREATE TABLE Authors (
     author_name VARCHAR(215) NOT NULL
 );
 
-CREATE TABLE books (
+CREATE TABLE Books (
     book_id INT PRIMARY KEY,
     title VARCHAR(130) NOT NULL,
     author_id INT,
@@ -14,18 +14,18 @@ CREATE TABLE books (
     FOREIGN KEY (author_id) REFERENCES authors(author_id)
 );
 
-CREATE TABLE customers (
+CREATE TABLE Customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215) NOT NULL,
     email VARCHAR(215) NOT NULL,
     address TEXT
 );
 
-CREATE TABLE orders (
+CREATE TABLE Orders (
     order_id INT PRIMARY KEY,
     customer_id INT,
     order_id DATE NOT NULL,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 
 CREATE TABLE order_details (
